@@ -20,15 +20,17 @@
 
 // console.log(personalMovieDB);
 
-const num = 60;
+const hamburger = 3,
+    fries = 3,
+    cola = 0,
+    nuggets = 2;
 
-switch (true) {
-    case num === 49:
-        console.log('yes');
-        break;
-    case num < 49:
-        console.log('error');
-        break;
-    default:
-        console.log('something went wrong');
+if ((hamburger === 3 && cola === 2) || (fries === 3 && nuggets)) {
+    console.log('yes we eat');
+} else {
+    console.log('we dont eat');
 }
+
+console.log((hamburger === 3 && cola === 2) || (fries === 3 && nuggets));
+
+console.log((5 === 5 && 3 > 1) || 5);
