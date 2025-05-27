@@ -1,36 +1,61 @@
 'use strict';
 
-// const numberOfFilms = +prompt('сколько фильмов вы уже смотрели?', 20);
-
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false,
+// const drawPiramide = (length, acc = '') => {
+//     for (let i = 1; i <= length; i++) {
+//         for (let j = 0; j < i; j++) {
+//             acc += '*';
+//         }
+//         acc += '\n';
+//     }
+//     return acc;
 // };
 
-// const a = prompt('какой последний фильм?', 'star wars'),
-//     b = +prompt('на сколько оцените его', 8.2),
-//     c = prompt('какой последний фильм?', 'far and away'),
-//     d = +prompt('на сколько оцените его', 9.0);
+// first: for (let i = 0; i <= 3; i++) {
+//     console.log(`first level:${i}`);
+//     for (let j = 0; j <= 3; j++) {
+//         console.log(`second level:${j}`);
+//         for (let k = 0; k <= 3; k++) {
+//             if (k === 2) break first;
+//             console.log(`third level:${k}`);
+//         }
+//     }
+// }
 
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
+// for (let i = 2; i <= 16; i++) {
+//     if (i % 2 === 0) {
+//         continue;
+//     } else {
+//         console.log(i);
+//     }
+// }
 
-// console.log(personalMovieDB);
+// let i = 2;
+// while (i <= 16) {
+//     if (i % 2 === 0) {
+//         i++;
+//         continue;
+//     } else {
+//         console.log(i);
+//     }
+//     i++;
+// }
 
-const hamburger = 3,
-    fries = 3,
-    cola = 0,
-    nuggets = 2;
+// function fifthTask() {
+//     const arrayOfNumbers = [];
 
-if ((hamburger === 3 && cola === 2) || (fries === 3 && nuggets)) {
-    console.log('yes we eat');
-} else {
-    console.log('we dont eat');
-}
+//     // Пишем решение вот тут
+//     let i = 5;
+//     while (i <= 10) {
+//         if (i < 5) {
+//             i++;
+//             continue;
+//         }
+//         arrayOfNumbers[i - 5] = i;
+//         i++;
+//     }
 
-console.log((hamburger === 3 && cola === 2) || (fries === 3 && nuggets));
-
-console.log((5 === 5 && 3 > 1) || 5);
+//     // Не трогаем
+//     console.log(arrayOfNumbers);
+//     return arrayOfNumbers;
+// }
+// fifthTask();
