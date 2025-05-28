@@ -2,6 +2,7 @@
 
 import '/src/js/personalMovieDB.js';
 import '/src/js/functions.js';
+import '/src/sass/style.scss';
 
 // const drawPiramide = (length, acc = '') => {
 //     for (let i = 1; i <= length; i++) {
