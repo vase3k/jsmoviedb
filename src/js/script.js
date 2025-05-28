@@ -1,5 +1,8 @@
 'use strict';
 
+import '/src/js/personalMovieDB.js';
+import '/src/js/functions.js';
+
 // const drawPiramide = (length, acc = '') => {
 //     for (let i = 1; i <= length; i++) {
 //         for (let j = 0; j < i; j++) {

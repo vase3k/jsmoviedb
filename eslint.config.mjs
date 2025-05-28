@@ -7,5 +7,6 @@ export default defineConfig([
     {
         files: ['**/*.{js,mjs,cjs}'],
         languageOptions: { globals: { ...globals.browser, ...globals.node } },
+        'no-unused-vars': ['error', { vars: 'all', args: 'none' }],
     },
 ]);
