@@ -59,4 +59,4 @@ function writeYourGenres() {
 //rememberMyFilms();
 //detectPersonalLevel();
 //writeYourGenres();
-showMyDB(personalMovieDB.privat);
+//showMyDB(personalMovieDB.privat);
