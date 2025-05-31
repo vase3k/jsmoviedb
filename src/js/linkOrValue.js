@@ -44,3 +44,99 @@ oldArray[3][4] = 55;
 const video = ['youtube', 'vimeo', 'rutube'],
     blogs = ['worldpress', 'livejournal', 'blogger'],
     internet = [...video, ...blogs, 'vk', 'odnoklassniki'];
+
+const personalPlanPeter = {
+    name: 'Peter',
+    age: '29',
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%',
+        },
+        exp: '1 month',
+    },
+    showAgeAndLangs: (personalPlanPeter) => {
+        const { age, skills } = personalPlanPeter,
+            { languages } = skills;
+        let langString = languages.map((item) => item.toUpperCase()).join(' ');
+        return `Мне ${age} и я владею языками: ${langString}`;
+    },
+};
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+function showExperience({ skills }) {
+    return skills.exp;
+}
+showExperience(personalPlanPeter);
+
+function showProgrammingLangs(plan) {
+    const { programmingLangs } = plan.skills;
+    let acc = '';
+    for (let key in programmingLangs) {
+        acc += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
+    }
+    return acc;
+}
+
+showProgrammingLangs(personalPlanPeter);
+
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+    if (arr.length === 0) {
+        return 'Семья пуста';
+    }
+    return `Семья состоит из: ${arr.join(' ')}`;
+}
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+    arr.map((e) => e.toLowerCase()).forEach((e) => console.log(e));
+}
+//standardizeStrings(favoriteCities);
+
+const someString = 'This is some strange string';
+
+function reverse(str) {
+    if (typeof str !== 'string') {
+        return 'Ошибка!';
+    }
+    return str.split('').reverse().join('');
+}
+
+reverse(someString);
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+    if (arr.length === 0) {
+        return 'Нет доступных валют';
+    }
+    let res = baseCurrencies.concat(additionalCurrencies);
+    let res2 = [];
+    res.forEach((e) => {
+        if (arr.includes(e)) {
+            res2.push(e);
+        }
+    });
+    res2 = res2.filter((e) => e !== missingCurr);
+    let str = 'Доступные валюты:\n';
+    res2.forEach((e) => (str += `${e}\n`));
+    return str;
+}
+
+function availableCurr(arr, missingCurr) {
+    if (arr.length === 0) {
+        return 'Нет доступных валют';
+    }
+    let res2 = [],
+        str = 'Доступные валюты:\n';
+    baseCurrencies.concat(additionalCurrencies).forEach((e) => arr.includes(e) && res2.push(e));
+    res2.filter((e) => e !== missingCurr).forEach((e) => (str += `${e}\n`));
+    return str;
+}
+
+console.log(availableCurr(['UAH', 'RUB', 'CNY', 'USD'], 'CNY'));
