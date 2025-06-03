@@ -37,3 +37,5 @@ function sum(a) {
 }
 
 console.log(sum(5)(2));
+
+console.log(0 || NaN || false || null);
